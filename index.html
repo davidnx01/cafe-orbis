@@ -1,0 +1,325 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Café Orbis · kaviareň na Bezručovej v Trenčíne — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre Café Orbis — kaviareň s moderným dizajnom v širšom centre Trenčína, parkovanie zadarmo, wifi, káva so sebou, platba kartou.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --space:#1F1B19; --space-2:#2A2421; --latte:#D8C2A3; --milk:#F2F1EE; --milk-2:#E4E2DD;
+  --teal:#2E5D61; --teal-d:#234A4D; --teal-lt:#8DBDBE; --walnut:#6B3D27; --taupe:#9B806F; --ink:#1F1B19; --mute:#5F5853;
+  --orbit:rgba(216,194,163,.34); --hair:rgba(31,27,25,.15); --hair-lt:rgba(242,241,238,.16);
+  --wide:"Syncopate","Arial Black",sans-serif; --sans:"Red Hat Display",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--milk);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--teal-lt);outline-offset:3px}
+.w{max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px}
+.num{font-variant-numeric:tabular-nums}
+.lab{font:700 12px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.u{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.u:hover{background-size:100% 1px}
+
+.notice{background:var(--latte);color:var(--space);font:500 13.5px/1.45 var(--sans);text-align:center;padding:9px 16px}
+
+/* logo: square frame + wordmark */
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo i{width:34px;height:30px;border:3px solid currentColor;position:relative;flex:none}
+.logo i::after{content:"";position:absolute;inset:4px 5px;border:2px solid currentColor}
+.logo span{font:400 17px/1 var(--wide);letter-spacing:.02em}
+.logo b{font-weight:700}
+
+.dark{background:var(--space);color:var(--milk)}
+.hd{display:flex;align-items:center;gap:24px;min-height:80px;border-bottom:1px solid var(--hair-lt)}
+nav{margin-left:auto;display:flex;gap:30px}
+nav a{font:500 15px/1 var(--sans);padding:14px 0}
+.hd-tel{font:700 15px/1 var(--sans);text-decoration:none;border:1px solid var(--latte);color:var(--latte);padding:14px 20px;border-radius:999px;transition:background .2s,color .2s}
+.hd-tel:hover{background:var(--latte);color:var(--space)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:64px;min-height:min(640px,82vh)}
+.hero .lab{color:var(--latte)}
+h1{font:700 clamp(40px,5.4vw,70px)/1.02 var(--wide);letter-spacing:-.01em;margin:22px 0 0;text-transform:uppercase}
+h1 span{display:block;font-weight:400}
+.lede{font:400 21px/1.45 var(--sans);max-width:30ch;margin:26px 0 0;color:#E9E5DF}
+.src{display:block;font:500 13px/1.4 var(--sans);color:var(--taupe);margin-top:8px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font:700 15.5px/1 var(--sans);text-decoration:none;transition:background .2s,color .2s}
+.btn-l{background:var(--latte);color:var(--space)}
+.btn-l:hover{background:var(--milk)}
+.btn-o{border:1px solid currentColor}
+.btn-o:hover{background:var(--milk);color:var(--space)}
+.btn-t{background:var(--teal);color:var(--milk)}
+.btn-t:hover{background:var(--teal-d)}
+.facts{display:flex;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--hair-lt)}
+.facts div{padding:16px 24px 0 0;margin-right:24px;border-right:1px solid var(--hair-lt)}
+.facts div:last-child{border:0;margin:0}
+.facts b{display:block;font:700 21px/1.15 var(--sans)}
+.facts span{font:500 13px/1.4 var(--sans);color:var(--taupe)}
+
+.sys{position:relative;width:min(580px,100%);aspect-ratio:1;justify-self:center}
+.sys svg.orb{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orb circle,.orb ellipse{fill:none;stroke:var(--orbit);stroke-width:1}
+.orb .dash{stroke-dasharray:2 7;stroke:rgba(216,194,163,.5)}
+.orb .tilt{stroke:rgba(141,189,190,.45)}
+.planet{position:absolute;left:23%;top:23%;width:54%;height:54%;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--space),0 0 0 11px var(--orbit)}
+.planet img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.planet:hover img{transform:scale(1.045)}
+.moon{position:absolute;width:15%;height:15%;left:19.5%;top:7.5%;border-radius:50%;overflow:hidden;box-shadow:0 0 0 5px var(--space),0 0 0 6px var(--latte);transform:translate(-50%,-50%)}
+.moon img{width:100%;height:100%;object-fit:cover}
+.sat{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;white-space:nowrap;background:var(--space);border:1px solid var(--orbit);border-radius:999px;padding:8px 14px 8px 10px;font:500 14px/1 var(--sans);color:var(--milk)}
+.sat::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--teal-lt);box-shadow:0 0 0 3px rgba(141,189,190,.22)}
+.s1{left:74.5%;top:7.5%}.s2{left:88%;top:62%}.s3{left:16%;top:80%}.s4{left:12%;top:38%}
+
+/* money block */
+.coffee{background:var(--teal);color:var(--milk);padding:90px 0}
+.coffee-g{display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center}
+.cup{position:relative;width:300px;height:300px}
+.cup img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.cup::before{content:"";position:absolute;inset:-26px;border-radius:50%;border:1px solid rgba(242,241,238,.3)}
+.cup::after{content:"";position:absolute;inset:-56px;border-radius:50%;border:1px dashed rgba(242,241,238,.22)}
+.coffee .lab{color:var(--teal-lt)}
+.big{font:400 clamp(34px,4.4vw,58px)/1.08 var(--sans);letter-spacing:-.015em;margin:14px 0 6px}
+.big em{font-style:italic;color:var(--latte)}
+.coffee .src{color:rgba(242,241,238,.7)}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border-top:1px solid var(--hair-lt)}
+.menu li{list-style:none;padding:16px 18px 16px 0;border-bottom:1px solid var(--hair-lt);font:500 18px/1.3 var(--sans)}
+.menu li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--latte);margin:0 12px 2px 0}
+.coffee small{display:block;font:500 13.5px/1.5 var(--sans);color:rgba(242,241,238,.75);margin-top:20px;max-width:62ch}
+
+/* space */
+.space{padding:96px 0}
+h2{font:700 clamp(24px,3vw,38px)/1.1 var(--wide);text-transform:uppercase;letter-spacing:-.01em}
+.sec-h{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
+.sec-h .lab{color:var(--teal);margin-bottom:14px}
+.sec-h p{color:var(--mute);max-width:46ch}
+.ring4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.ring4::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--hair)}
+.ring4 figure{position:relative;max-width:280px;justify-self:center;width:100%}
+.ring4 figure:nth-child(even){margin-top:56px}
+.ring4 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 8px var(--milk),0 0 0 9px var(--hair)}
+.ring4 figcaption{text-align:center;font:500 14px/1.35 var(--sans);color:var(--mute);margin-top:18px}
+
+/* hours */
+.hours{background:var(--milk-2);padding:96px 0;border-top:1px solid var(--hair)}
+.hours-g{display:grid;grid-template-columns:380px 1fr;gap:72px;align-items:center}
+.rings{width:100%;max-width:380px}
+.rings .trk{fill:none;stroke:rgba(31,27,25,.1);stroke-width:9}
+.rings .arc{fill:none;stroke:var(--teal);stroke-width:9;stroke-linecap:round}
+.rings .arc.we{stroke:var(--walnut)}
+.rings .hr{font:700 11px var(--sans);fill:var(--mute);text-anchor:middle}
+.rings .ctr{font:700 13px var(--sans);fill:var(--ink);text-anchor:middle;letter-spacing:.12em}
+.hours .lab{color:var(--teal);margin-bottom:14px}
+.htab{margin-top:28px;border-top:2px solid var(--ink);max-width:520px}
+.htab div{display:grid;grid-template-columns:1fr auto;gap:20px;padding:14px 0;border-bottom:1px solid var(--hair);font:500 18px/1.3 var(--sans)}
+.htab b{font-weight:700}
+.htab i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal);margin-right:12px}
+.htab div:nth-child(n+2) i{background:var(--walnut)}
+.ov{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--walnut);border:1px solid currentColor;padding:4px 7px 3px;margin-left:8px;vertical-align:2px}
+.hours small{display:block;font:500 13.5px/1.5 var(--sans);color:var(--mute);margin-top:16px;max-width:52ch}
+
+/* rating */
+.rate{padding:80px 0}
+.rate-g{display:grid;grid-template-columns:auto auto 1fr;gap:56px;align-items:center}
+.score b{display:block;font:700 92px/.9 var(--wide);color:var(--teal);letter-spacing:-.04em}
+.score span,.fb span{font:500 14px/1.45 var(--sans);color:var(--mute)}
+.fb{border-left:1px solid var(--hair);padding-left:48px}
+.fb b{display:block;font:700 44px/1 var(--sans);color:var(--walnut)}
+.rate p{font:400 22px/1.4 var(--sans);max-width:30ch;justify-self:end}
+
+/* contact */
+.kontakt{padding:92px 0 100px}
+.k-g{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.kontakt .lab{color:var(--latte);margin-bottom:14px}
+.kontakt p{color:#CFC8C0;max-width:42ch;margin-top:18px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+dl{border-top:1px solid var(--latte)}
+.k-row{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid var(--hair-lt)}
+.k-row dt{font:700 11.5px/1.8 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.k-row dd{font:500 18px/1.5 var(--sans)}
+.k-row dd a{font-weight:700}
+.k-row small{display:block;font:500 13px/1.45 var(--sans);color:var(--taupe);margin-top:2px}
+.kontakt .ov{color:var(--latte)}
+
+footer{border-top:1px solid var(--hair-lt);padding:28px 0 32px;font:500 14px/1.5 var(--sans);color:var(--taupe)}
+.ft{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px}
+
+.mbar{display:none}
+@media (max-width:980px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr;min-height:0;gap:48px}
+  .coffee-g,.sec-h,.hours-g,.k-g{grid-template-columns:1fr}
+  .coffee-g{gap:64px;justify-items:start}
+  .ring4{grid-template-columns:1fr 1fr}
+  .ring4::before{display:none}
+  .ring4 figure:nth-child(even){margin-top:0}
+  .rate-g{grid-template-columns:auto 1fr;gap:28px 40px}
+  .rate p{grid-column:1/-1;justify-self:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .w{padding-left:18px;padding-right:18px}
+  .hd{min-height:68px}
+  .hd-tel{display:none}
+  .logo span{font-size:15px}
+  .hero{padding-top:30px;padding-bottom:52px}
+  .lede{font-size:19px}
+  .facts div{padding-right:16px;margin-right:16px}
+  .facts b{font-size:19px}
+  .sys{width:calc(100% - 16px);margin:0 8px}
+  .sat{font-size:12px;padding:6px 10px 6px 8px;gap:6px}
+  .sat::before{width:7px;height:7px}
+  .s1{left:66%;top:6%}.s2{left:78%;top:63%}.s3{left:24%;top:86%}.s4{left:19%;top:37%}
+  .coffee{padding:72px 0}
+  .cup{width:220px;height:220px;margin:40px 0 0 40px}
+  .cup::after{inset:-40px}
+  .menu{grid-template-columns:1fr 1fr}
+  .space,.hours,.kontakt{padding:68px 0}
+  .ring4{gap:28px 16px}
+  .ring4 img{box-shadow:0 0 0 5px var(--milk),0 0 0 6px var(--hair)}
+  .rings{max-width:300px}
+  .score b{font-size:64px}
+  .fb{padding-left:26px}
+  .fb b{font-size:34px}
+  .k-row{grid-template-columns:1fr;gap:2px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--space);border-top:1px solid var(--hair-lt);padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font:700 16px/1 var(--sans);text-decoration:none;color:var(--milk);border:1px solid var(--orbit)}
+  .mbar a:first-child{background:var(--latte);color:var(--space);border-color:var(--latte)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<div class="dark">
+<header class="w">
+  <div class="hd">
+    <a class="logo" href="#top" aria-label="Café Orbis — na začiatok"><i aria-hidden="true"></i><span>CAFÉ<b>ORBIS</b></span></a>
+    <nav aria-label="Hlavná navigácia">
+      <a class="u" href="#ponuka">Ponuka</a>
+      <a class="u" href="#priestor">Priestor</a>
+      <a class="u" href="#hodiny">Hodiny</a>
+      <a class="u" href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="hd-tel num" href="tel:+421908882801">0908 882 801</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="w hero" aria-labelledby="h1">
+  <div>
+    <p class="lab">Kaviareň · Bezručova · Trenčín</p>
+    <h1 id="h1"><span>Café</span>Orbis</h1>
+    <p class="lede">„Fajčiarska kaviareň s moderným dizajnom v širšom centre mesta.“</p>
+    <span class="src">— z ich predstavenia na Facebooku</span>
+    <div class="cta">
+      <a class="btn btn-l num" href="tel:+421908882801">Zavolať 0908 882 801</a>
+      <a class="btn btn-o" href="https://www.google.com/maps/search/Café+Orbis+Petra+Bezruča+64+Trenčín" target="_blank" rel="noopener">Ako k nám</a>
+    </div>
+    <div class="facts">
+      <div><b class="num">4,7 ★</b><span>Google · 159 hodnotení</span></div>
+      <div><b class="num">od 7:30</b><span>Po–Pi · overiť</span></div>
+      <div><b>Zadarmo</b><span>parkovanie</span></div>
+    </div>
+  </div>
+  <div class="sys">
+    <svg class="orb" viewBox="0 0 580 580" aria-hidden="true">
+      <circle cx="290" cy="290" r="200"/>
+      <circle class="dash" cx="290" cy="290" r="245"/>
+      <circle cx="290" cy="290" r="286"/>
+      <ellipse class="tilt" cx="290" cy="290" rx="300" ry="112" transform="rotate(-24 290 290)"/>
+    </svg>
+    <div class="planet"><img src="assets/kaviaren-kresla.webp" width="1000" height="1000" fetchpriority="high" alt="Interiér Café Orbis — tyrkysové kreslá, orechové stolíky a závesné guľové svietidlá"></div>
+    <div class="moon"><img src="assets/cappuccino.webp" width="315" height="315" alt="Cappuccino s latte art"></div>
+    <span class="sat s1">Parkovanie zadarmo</span>
+    <span class="sat s2">Wi-Fi</span>
+    <span class="sat s3">Káva so sebou</span>
+    <span class="sat s4">Platba kartou</span>
+  </div>
+</section>
+</main>
+</div>
+
+<section class="coffee" id="ponuka" aria-labelledby="h-ponuka">
+  <div class="w coffee-g">
+    <div class="cup"><img src="assets/cappuccino.webp" width="315" height="315" loading="lazy" alt="Šálka cappuccina s listom z mliečnej peny na podšálke s logom Orbis"></div>
+    <div>
+      <p class="lab">Ponuka</p>
+      <h2 class="big" id="h-ponuka">„Fresh look. <em>Same coffee.</em>“</h2>
+      <span class="src">— Café Orbis na Facebooku, 1. 8. 2026</span>
+      <ul class="menu">
+        <li>káva</li><li>káva so sebou</li><li>čerstvé limonády</li><li>horúce nápoje</li><li>studené nápoje</li><li>víno a shoty</li>
+      </ul>
+      <small>Ukážka návrhu: nápojový lístok a ceny doplní kaviareň. Ponuka podľa ich FB („káva so sebou“) a profilu na Wanderlog, 4. 10. 2026.</small>
+    </div>
+  </div>
+</section>
+
+<section class="space" id="priestor" aria-labelledby="h-priestor">
+  <div class="w">
+    <div class="sec-h">
+      <div><p class="lab">Priestor</p><h2 id="h-priestor">Kreslá, stĺpy a svetelné gule</h2></div>
+      <p>Tyrkysové kreslá, orechové stolíky, čiernobiele fotografie na stenách a nad tým celé súhvezdie guľových svietidiel. Fotky sú z ich facebookovej stránky.</p>
+    </div>
+    <div class="ring4">
+      <figure><img src="assets/kaviaren-sedenie-okna.webp" width="315" height="315" loading="lazy" alt="Pohľad do kaviarne popri oknách so stolíkmi a kreslami"><figcaption>Pri oknách</figcaption></figure>
+      <figure><img src="assets/kaviaren-sedenie-stlpy.webp" width="315" height="315" loading="lazy" alt="Stolíky medzi bielymi stĺpmi a čiernobiele fotografie na stene"><figcaption>Medzi stĺpmi</figcaption></figure>
+      <figure><img src="assets/kaviaren-lustre-gule.webp" width="315" height="315" loading="lazy" alt="Guľové závesné svietidlá nad tyrkysovými kreslami"><figcaption>Pod guľami svetiel</figcaption></figure>
+      <figure><img src="assets/kaviaren-bar-v-pozadi.webp" width="315" height="315" loading="lazy" alt="Kreslá a lavice s barom v pozadí"><figcaption>Smerom k baru</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hodiny" aria-labelledby="h-hod">
+  <div class="w hours-g">
+    <svg class="rings" viewBox="0 0 340 340" role="img" aria-label="Otváracie hodiny ako sedem sústredných kruhov, jeden na každý deň"><circle cx="170" cy="170" r="150" class="trk"/><path d="M308.6 227.4A150 150 0 0 1 25.1 131.2" class="arc"/><circle cx="170" cy="170" r="133" class="trk"/><path d="M292.9 220.9A133 133 0 0 1 41.5 135.6" class="arc"/><circle cx="170" cy="170" r="116" class="trk"/><path d="M277.2 214.4A116 116 0 0 1 58.0 140.0" class="arc"/><circle cx="170" cy="170" r="99" class="trk"/><path d="M261.5 207.9A99 99 0 0 1 74.4 144.4" class="arc"/><circle cx="170" cy="170" r="82" class="trk"/><path d="M245.8 201.4A82 82 0 0 1 90.8 148.8" class="arc"/><circle cx="170" cy="170" r="65" class="trk"/><path d="M202.5 226.3A65 65 0 0 1 107.2 153.2" class="arc we"/><circle cx="170" cy="170" r="48" class="trk"/><path d="M146.0 211.6A48 48 0 0 1 123.6 157.6" class="arc we"/><text x="170" y="8" class="hr">0</text><text x="336" y="174" class="hr">6</text><text x="170" y="340" class="hr">12</text><text x="4" y="174" class="hr">18</text><text x="170" y="166" class="ctr">24 H</text><text x="170" y="184" class="ctr" style="font-weight:500;letter-spacing:.04em;fill:#5F5853">týždeň</text></svg>
+    <div>
+      <p class="lab">Hodiny</p>
+      <h2 id="h-hod">Obeh týždňa</h2>
+      <div class="htab">
+        <div><span><i></i>Pondelok – piatok</span><b class="num">7:30–19:00</b></div>
+        <div><span><i></i>Sobota</span><b class="num">10:00–19:00</b></div>
+        <div><span><i></i>Nedeľa</span><b class="num">14:00–19:00</b></div>
+      </div>
+      <small>Hodiny podľa profilu na Wanderlog (4. 10. 2026), jediný zdroj<span class="ov">overiť</span><br>Každý kruh je jeden deň (vonkajší pondelok, vnútorný nedeľa), oblúk ukazuje otváraciu dobu na 24-hodinovom ciferníku.</small>
+    </div>
+  </div>
+</section>
+
+<section class="rate" aria-labelledby="h-rate">
+  <div class="w rate-g">
+    <div class="score"><b class="num">4,7</b><span>★ na Google · 159 hodnotení<br>Wanderlog, 4. 10. 2026</span></div>
+    <div class="fb"><b class="num">84 %</b><span>odporúča na Facebooku<br>33 recenzií</span></div>
+    <p id="h-rate">Vysoké hodnotenie od hostí na Google aj na Facebooku.</p>
+  </div>
+</section>
+
+<section class="kontakt dark" id="kontakt" aria-labelledby="h-k">
+  <div class="w k-g">
+    <div>
+      <p class="lab">Kontakt</p>
+      <h2 id="h-k">Na Bezručovej</h2>
+      <p>V širšom centre Trenčína, s parkovaním zadarmo. Na kávu so sebou stačí prísť, na všetko ostatné zavolajte.</p>
+      <div class="links">
+        <a class="btn btn-l" href="https://www.google.com/maps/search/Café+Orbis+Petra+Bezruča+64+Trenčín" target="_blank" rel="noopener">Mapy Google</a>
+        <a class="btn btn-o" href="https://www.facebook.com/people/Caf%C3%A9-Orbis/100063486243634/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <dl>
+      <div class="k-row"><dt>Adresa</dt><dd>Petra Bezruča 2047/64, 911 01 Trenčín<span class="ov">overiť</span><small>na Facebooku: Bezručova 64/B</small></dd></div>
+      <div class="k-row"><dt>Telefón</dt><dd><a class="u num" href="tel:+421908882801">+421 908 882 801</a></dd></div>
+      <div class="k-row"><dt>E-mail</dt><dd><a class="u" href="mailto:cafe.orbis@gmail.com">cafe.orbis@gmail.com</a></dd></div>
+      <div class="k-row"><dt>Hodiny</dt><dd class="num">Po–Pi 7:30–19:00 · So 10–19 · Ne 14–19<span class="ov">overiť</span></dd></div>
+    </dl>
+  </div>
+</section>
+<footer class="dark">
+    <div class="w ft"><span class="logo"><i aria-hidden="true"></i><span>CAFÉ<b>ORBIS</b></span></span><span>Neoficiálny návrh webu · webdavid.sk · 2026</span></div>
+</footer>
+
+<div class="mbar"><a href="tel:+421908882801">Zavolať</a><a href="https://www.google.com/maps/search/Café+Orbis+Petra+Bezruča+64+Trenčín" target="_blank" rel="noopener">Mapa</a></div>
